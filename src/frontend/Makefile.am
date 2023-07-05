@@ -12,9 +12,9 @@ mm_loss_LDADD = -lrt ../util/libutil.a ../packet/libpacket.a
 mm_loss_LDFLAGS = -pthread
 
 bin_PROGRAMS += mm-ge-loss
-mm_loss_SOURCES = loss_ge_shell.cc loss_ge_queue.hh loss_ge_queue.cc
-mm_loss_LDADD = -lrt ../util/libutil.a ../packet/libpacket.a
-mm_loss_LDFLAGS = -pthread
+mm_ge_loss_SOURCES = loss_ge_shell.cc loss_ge_queue.hh loss_ge_queue.cc
+mm_ge_loss_LDADD = -lrt ../util/libutil.a ../packet/libpacket.a
+mm_ge_loss_LDFLAGS = -pthread
 
 bin_PROGRAMS += mm-onoff
 mm_onoff_SOURCES = onoffshell.cc loss_queue.hh loss_queue.cc

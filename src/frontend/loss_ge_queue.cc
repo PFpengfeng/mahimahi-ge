@@ -74,7 +74,7 @@ unsigned int StochasticSwitchingLink::wait_time( void )
         /* switch */
         link_is_on_ = !link_is_on_;
         /* worried about integer overflow when mean time = 0 */
-        next_switch_time_ += bound( (link_is_on_ ? off_process_ : on_process_)( prng_ ) );
+        next_switch_time_ += bound( (link_is_on_ ? off_process_ : on_process_)( g2b_prng_ ) );
     }
 
     if ( LossQueue::wait_time() == 0 ) {
