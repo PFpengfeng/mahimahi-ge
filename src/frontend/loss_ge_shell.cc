@@ -82,8 +82,11 @@ int main( int argc, char *argv[] )
 
         loss_app.start_uplink( shell_prefix,
                                command,
-                               uplink_loss );
-        loss_app.start_downlink( 0 );
+                               rate_log[0],
+                               rate_log[1],
+                               rate_log[2],
+                               rate_log[3] );
+        loss_app.start_downlink( 0.0 );
         return loss_app.wait_for_exit();
     } catch ( const exception & e ) {
         print_exception( e );

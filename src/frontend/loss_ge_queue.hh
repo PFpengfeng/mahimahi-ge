@@ -57,7 +57,9 @@ public:
     b2g_dist_( b2g_rate ),
     good_state_drop_dist_(good_state_loss_rate),
     bad_state_drop_dist_(bad_state_loss_rate)
-    {}
+    {
+        cerr << "the g2b_rate= " << g2b_rate << "   b2g_rate= "<<  b2g_rate << "   good_state_loss_rate= " << good_state_loss_rate << "   bad_state_loss_rate= " << bad_state_loss_rate << endl; 
+    }
 };
 
 class StochasticSwitchingLink : public LossQueue
