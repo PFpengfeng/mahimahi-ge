@@ -34,7 +34,7 @@ int main( int argc, char *argv[] )
             usage( argv[ 0 ] );
         }
 
-        stringstream argss( argv[ 2 ] );
+        stringstream argss( argv[ 1 ] );
         string token;
         // const double g2b_r, b2g_r, lr_g, lr_b;
         double rate_log[4];
@@ -86,7 +86,7 @@ int main( int argc, char *argv[] )
                                rate_log[1],
                                rate_log[2],
                                rate_log[3] );
-        loss_app.start_downlink( 0.0 );
+        loss_app.start_downlink( 0.0,0.0,0.0,0.0 );
         return loss_app.wait_for_exit();
     } catch ( const exception & e ) {
         print_exception( e );

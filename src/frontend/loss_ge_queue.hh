@@ -53,14 +53,14 @@ private:
     bool drop_packet( const std::string & packet ) override;
 
 public:
-    IIDLoss(double g2b_rate): 
-    g2b_dist_( g2b_rate ),
-    b2g_dist_( 0.1 ),
-    good_state_drop_dist_( 0.2 ),
-    bad_state_drop_dist_( 0.3 )
-    {
-        std::cerr << "not what I want! " << std::endl;
-    }
+    // IIDLoss(double g2b_rate): 
+    // g2b_dist_( g2b_rate ),
+    // b2g_dist_( 0.1 ),
+    // good_state_drop_dist_( 0.2 ),
+    // bad_state_drop_dist_( 0.3 )
+    // {
+    //     std::cerr << "not what I want! " << std::endl;
+    // }
 
     IIDLoss(double g2b_rate, double b2g_rate, double good_state_loss_rate, double bad_state_loss_rate ) 
     : g2b_dist_( g2b_rate ),
@@ -68,7 +68,7 @@ public:
     good_state_drop_dist_(good_state_loss_rate),
     bad_state_drop_dist_(bad_state_loss_rate)
     {
-        std::cerr << "the g2b_rate= " << g2b_rate << "   b2g_rate= "<<  b2g_rate << "   good_state_loss_rate= " << good_state_loss_rate << "   bad_state_loss_rate= " << bad_state_loss_rate << std::endl; 
+        //std::cerr << "the g2b_rate= " << g2b_rate << "   b2g_rate= "<<  b2g_rate << "   good_state_loss_rate= " << good_state_loss_rate << "   bad_state_loss_rate= " << bad_state_loss_rate << std::endl; 
     }
 };
 
